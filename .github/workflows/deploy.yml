@@ -1,0 +1,88 @@
+name: Deploy FSD Assignments Portfolio
+
+on:
+  push:
+    branches:
+      - main
+
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: github-pages
+  cancel-in-progress: true
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Build Assignment 4
+        working-directory: Assignment 4
+        run: |
+          npm ci
+          npm run build
+
+      - name: Build Assignment 5
+        working-directory: Assignment 5
+        run: |
+          npm ci
+          npm run build
+
+      - name: Build Assignment 6
+        working-directory: Assignment 6
+        run: |
+          npm ci
+          npm run build
+
+      - name: Prepare deployment directory
+        run: |
+          mkdir -p public
+
+          # Main dashboard
+          cp index.html style.css script.js public/
+
+          # Plain HTML assignments
+          cp -r "Assignment 1" public/
+          cp -r "Assignment 2" public/
+          cp -r "Assignment 3" public/
+
+          # React production builds
+          mkdir -p "public/Assignment 4"
+          mkdir -p "public/Assignment 5"
+          mkdir -p "public/Assignment 6"
+
+          cp -r "Assignment 4/dist/." "public/Assignment 4/"
+          cp -r "Assignment 5/dist/." "public/Assignment 5/"
+          cp -r "Assignment 6/dist/." "public/Assignment 6/"
+
+          # Disable Jekyll processing
+          touch public/.nojekyll
+
+      - name: Setup GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload Pages Artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: public
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
