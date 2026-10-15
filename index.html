@@ -1,0 +1,641 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vinit | Full Stack Development Portfolio</title>
+  
+  <meta name="description" content="Full Stack Development LCA 2 Portfolio showcasing 6 comprehensive web development assignments built with Vanilla JavaScript and React." />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- Ambient Background Gradients & Grid Pattern -->
+  <div class="bg-grid-pattern"></div>
+  <div class="ambient-glow glow-top-left"></div>
+  <div class="ambient-glow glow-top-right"></div>
+  <div class="ambient-glow glow-bottom-center"></div>
+
+  <!-- Top Glassmorphism Navigation Bar -->
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="#" class="brand-logo" id="brandLogo">
+        <div class="brand-badge">
+          <span class="brand-letter">V</span>
+        </div>
+        <div class="brand-text">
+          <span class="brand-name">Vinit<span class="brand-dot">.</span></span>
+          <span class="brand-tag">FSD Portfolio</span>
+        </div>
+      </a>
+
+      <div class="nav-center-pill">
+        <span class="course-badge">LCA-2</span>
+        <span class="course-name">Full Stack Development</span>
+      </div>
+
+      <div class="nav-actions">
+        <div class="status-indicator">
+          <span class="status-pulse"></span>
+          <span class="status-text">6 Modules Live</span>
+        </div>
+        <a href="https://github.com/vinit3977/FSD-Assignment-LCA-2" target="_blank" rel="noopener noreferrer" class="github-btn" id="githubRepoBtn">
+          <svg class="github-icon" viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+            <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+          </svg>
+          <span>GitHub</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Showcase Container -->
+  <main class="main-wrapper">
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="hero-grid">
+        <!-- Hero Left / Content -->
+        <div class="hero-info">
+          <div class="hero-pill-tag">
+            <span class="pill-spark">✦</span>
+            <span>ACADEMIC LABORATORY &bull; FULL STACK LAB</span>
+          </div>
+
+          <h1 class="hero-title">
+            Engineering Web Systems <br />
+            From <span class="gradient-text-accent">Algorithms</span> to <span class="gradient-text-react">Components.</span>
+          </h1>
+
+          <p class="hero-subtitle">
+            A comprehensive showcase of six specialized assignments exploring core JavaScript DOM architectures, reactive form handling, and modern component lifecycle engineering.
+          </p>
+
+          <!-- Quick Metric Stats -->
+          <div class="hero-metrics-container">
+            <div class="metric-card">
+              <div class="metric-number" id="totalCountDisplay">06</div>
+              <div class="metric-label">Completed Labs</div>
+            </div>
+            <div class="metric-separator"></div>
+            <div class="metric-card">
+              <div class="metric-number">03</div>
+              <div class="metric-label">Vanilla JS Apps</div>
+            </div>
+            <div class="metric-separator"></div>
+            <div class="metric-card">
+              <div class="metric-number">03</div>
+              <div class="metric-label">React + Vite Apps</div>
+            </div>
+          </div>
+
+          <!-- Quick Action Buttons -->
+          <div class="hero-cta-group">
+            <a href="#projectsSection" class="btn-primary" id="exploreBtn">
+              <span>Explore All Projects</span>
+              <span class="btn-arrow">&darr;</span>
+            </a>
+            <a href="https://github.com/vinit3977/FSD-Assignment-LCA-2" target="_blank" rel="noopener noreferrer" class="btn-secondary" id="viewCodeBtn">
+              <span>View Repository</span>
+              <span class="btn-arrow">&nearr;</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Hero Right / Modern Terminal Showcase -->
+        <div class="hero-visual">
+          <div class="terminal-card">
+            <div class="terminal-header">
+              <div class="window-controls">
+                <span class="control-dot close"></span>
+                <span class="control-dot minimize"></span>
+                <span class="control-dot expand"></span>
+              </div>
+              <div class="terminal-title">vinit@fsd-lab: ~/portfolio</div>
+              <div class="terminal-badge">LIVE</div>
+            </div>
+
+            <div class="terminal-body">
+              <div class="code-line">
+                <span class="prompt">$</span>
+                <span class="cmd">cat</span>
+                <span class="arg">manifest.json</span>
+              </div>
+              <div class="json-output">
+                <p><span class="json-brace">{</span></p>
+                <p class="json-indent"><span class="json-key">"author"</span>: <span class="json-val">"Vinit"</span>,</p>
+                <p class="json-indent"><span class="json-key">"course"</span>: <span class="json-val">"FSD (LCA-2)"</span>,</p>
+                <p class="json-indent"><span class="json-key">"assignments"</span>: <span class="json-num">6</span>,</p>
+                <p class="json-indent"><span class="json-key">"technologies"</span>: <span class="json-brace">[</span></p>
+                <p class="json-indent-double"><span class="json-tag-js">"Vanilla JS"</span>, <span class="json-tag-dom">"DOM API"</span>,</p>
+                <p class="json-indent-double"><span class="json-tag-react">"React 19"</span>, <span class="json-tag-vite">"Vite 8"</span></p>
+                <p class="json-indent"><span class="json-brace">]</span>,</p>
+                <p class="json-indent"><span class="json-key">"status"</span>: <span class="json-green">"100% Passed"</span></p>
+                <p><span class="json-brace">}</span></p>
+              </div>
+
+              <div class="terminal-divider"></div>
+
+              <div class="code-line">
+                <span class="prompt">$</span>
+                <span class="cmd">npm</span>
+                <span class="arg">run test:all</span>
+              </div>
+              <div class="terminal-status-row">
+                <span class="test-pass-badge">&#10003; 6/6 SUITES PASSED</span>
+                <span class="cursor-blinker"></span>
+              </div>
+            </div>
+
+            <!-- Floating Accent Badges -->
+            <div class="floating-tech-badge badge-top-right">
+              <span class="badge-icon">&#9883;</span>
+              <span>React Vite Ecosystem</span>
+            </div>
+            <div class="floating-tech-badge badge-bottom-left">
+              <span class="badge-icon">&#9889;</span>
+              <span>High Performance DOM</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects-section" id="projectsSection">
+      <!-- Section Header -->
+      <div class="section-top-bar">
+        <div>
+          <div class="section-tag-pill">THE ASSIGNMENTS</div>
+          <h2 class="section-heading">Curated Lab Projects<span class="heading-accent">.</span></h2>
+          <p class="section-desc">Interactive applications covering pure JavaScript algorithmic foundations to component-driven React architectures.</p>
+        </div>
+
+        <div class="project-counter-box">
+          <span class="counter-label">Displaying</span>
+          <span class="counter-num" id="visibleCounter">06</span>
+          <span class="counter-total">/ 06</span>
+        </div>
+      </div>
+
+      <!-- Search & Filtering Toolbar -->
+      <div class="filter-toolbar">
+        <div class="search-box">
+          <svg class="search-svg" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <input type="text" id="searchInput" placeholder="Search by name, concept, or tech stack..." autocomplete="off" />
+          <span class="keyboard-chip">Ctrl + K</span>
+        </div>
+
+        <div class="filter-chips-container">
+          <button class="filter-chip active" data-category="all" id="filterAll">
+            <span class="chip-dot dot-all"></span>
+            <span>All Projects</span>
+            <span class="chip-count">6</span>
+          </button>
+
+          <button class="filter-chip" data-category="HTML/CSS/JS" id="filterVanilla">
+            <span class="chip-dot dot-vanilla"></span>
+            <span>Vanilla JS</span>
+            <span class="chip-count">3</span>
+          </button>
+
+          <button class="filter-chip" data-category="React" id="filterReact">
+            <span class="chip-dot dot-react"></span>
+            <span>React &bull; Vite</span>
+            <span class="chip-count">3</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Bento Cards Grid -->
+      <div class="cards-grid" id="assignmentsGrid">
+        
+        <!-- CARD 01: Calculator -->
+        <article class="project-card" data-category="HTML/CSS/JS" data-assignment="1">
+          <div class="card-art art-orange">
+            <div class="card-glass-header">
+              <span class="project-index">ASSIGNMENT 01</span>
+              <span class="stack-badge badge-js">JS CORE</span>
+            </div>
+
+            <!-- Calculator Art Representation -->
+            <div class="calc-mockup">
+              <div class="calc-mockup-screen">
+                <span class="calc-mockup-history">128 &times; 4</span>
+                <span class="calc-mockup-display">512</span>
+              </div>
+              <div class="calc-mockup-grid">
+                <span class="c-key">7</span><span class="c-key">8</span><span class="c-key">9</span><span class="c-op">&divide;</span>
+                <span class="c-key">4</span><span class="c-key">5</span><span class="c-key">6</span><span class="c-op">&times;</span>
+                <span class="c-key">1</span><span class="c-key">2</span><span class="c-key">3</span><span class="c-op">&minus;</span>
+                <span class="c-key">C</span><span class="c-key">0</span><span class="c-eq">=</span><span class="c-op">+</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="card-content">
+            <div class="card-meta-row">
+              <span class="meta-tag">HTML / CSS / JS</span>
+              <span class="tech-icon-pill">Pure DOM</span>
+            </div>
+
+            <h3 class="card-title">JavaScript Calculator</h3>
+            <p class="card-description">
+              A high-precision arithmetic engine utilizing functional switch-case logic, dynamic evaluation, and clean mathematical operator processing.
+            </p>
+
+            <div class="card-skill-tags">
+              <span class="skill-tag">Functions</span>
+              <span class="skill-tag">Switch Logic</span>
+              <span class="skill-tag">DOM Manipulation</span>
+            </div>
+
+            <div class="card-action-footer">
+              <a href="./Assignment%201/" class="launch-btn" id="launchCard1">
+                <span>Launch App</span>
+                <svg class="launch-arrow" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <path d="M7 17L17 7M17 7H7M17 7V17" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- CARD 02: Interactive To-Do List -->
+        <article class="project-card" data-category="HTML/CSS/JS" data-assignment="2">
+          <div class="card-art art-emerald">
+            <div class="card-glass-header">
+              <span class="project-index">ASSIGNMENT 02</span>
+              <span class="stack-badge badge-js">JS CORE</span>
+            </div>
+
+            <!-- To-Do Mockup Representation -->
+            <div class="todo-mockup">
+              <div class="todo-mockup-header">
+                <span class="todo-mockup-title">Task Pipeline</span>
+                <span class="todo-status-pill">2 Active</span>
+              </div>
+              <div class="todo-mockup-list">
+                <div class="mockup-task done">
+                  <span class="mock-checkbox checked">&#10003;</span>
+                  <span class="mock-task-text">Implement Event Delegation</span>
+                </div>
+                <div class="mockup-task">
+                  <span class="mock-checkbox"></span>
+                  <span class="mock-task-text">Render Dynamic Task Nodes</span>
+                </div>
+                <div class="mockup-task">
+                  <span class="mock-checkbox"></span>
+                  <span class="mock-task-text">Filter Active & Completed</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card-content">
+            <div class="card-meta-row">
+              <span class="meta-tag">HTML / CSS / JS</span>
+              <span class="tech-icon-pill">Event Systems</span>
+            </div>
+
+            <h3 class="card-title">Interactive To-Do List</h3>
+            <p class="card-description">
+              A dynamic task management system supporting asynchronous creation, reactive completion toggles, and seamless element removal through DOM events.
+            </p>
+
+            <div class="card-skill-tags">
+              <span class="skill-tag">Event Listeners</span>
+              <span class="skill-tag">DOM Mutation</span>
+              <span class="skill-tag">Class Toggling</span>
+            </div>
+
+            <div class="card-action-footer">
+              <a href="./Assignment%202/" class="launch-btn" id="launchCard2">
+                <span>Launch App</span>
+                <svg class="launch-arrow" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <path d="M7 17L17 7M17 7H7M17 7V17" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- CARD 03: Registration Form -->
+        <article class="project-card" data-category="HTML/CSS/JS" data-assignment="3">
+          <div class="card-art art-blue">
+            <div class="card-glass-header">
+              <span class="project-index">ASSIGNMENT 03</span>
+              <span class="stack-badge badge-js">JS CORE</span>
+            </div>
+
+            <!-- Form Mockup Representation -->
+            <div class="form-mockup">
+              <div class="form-mockup-badge">&#128274; Client Verification</div>
+              <div class="form-mockup-field valid">
+                <span class="f-label">Name</span>
+                <span class="f-input">Vinit Sharma</span>
+                <span class="f-status">&#10003;</span>
+              </div>
+              <div class="form-mockup-field valid">
+                <span class="f-label">Email</span>
+                <span class="f-input">vinit@example.com</span>
+                <span class="f-status">&#10003;</span>
+              </div>
+              <div class="form-mockup-field">
+                <span class="f-label">Password</span>
+                <span class="f-input">&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;</span>
+                <span class="f-meter"></span>
+              </div>
+            </div>
+          </div>
+
+          <div class="card-content">
+            <div class="card-meta-row">
+              <span class="meta-tag">HTML / CSS / JS</span>
+              <span class="tech-icon-pill">Form Validation</span>
+            </div>
+
+            <h3 class="card-title">User Registration Form</h3>
+            <p class="card-description">
+              Robust client-side input validation pipeline utilizing Regular Expressions, live error state injection, and strict pattern verification.
+            </p>
+
+            <div class="card-skill-tags">
+              <span class="skill-tag">RegEx Patterns</span>
+              <span class="skill-tag">Real-Time Validation</span>
+              <span class="skill-tag">Error Handling</span>
+            </div>
+
+            <div class="card-action-footer">
+              <a href="./Assignment%203/" class="launch-btn" id="launchCard3">
+                <span>Launch App</span>
+                <svg class="launch-arrow" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <path d="M7 17L17 7M17 7H7M17 7V17" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- CARD 04: User Profile Card (React) -->
+        <article class="project-card" data-category="React" data-assignment="4">
+          <div class="card-art art-cyan">
+            <div class="card-glass-header">
+              <span class="project-index">ASSIGNMENT 04</span>
+              <span class="stack-badge badge-react">REACT + VITE</span>
+            </div>
+
+            <!-- Profile Mockup Representation -->
+            <div class="profile-mockup">
+              <div class="p-card-top">
+                <div class="p-avatar-glow">
+                  <span class="p-avatar-char">&#128187;</span>
+                </div>
+                <div class="p-info">
+                  <span class="p-name">Rahul Sharma</span>
+                  <span class="p-role">Full Stack Engineer</span>
+                </div>
+              </div>
+              <div class="p-chips">
+                <span class="p-chip">Java</span>
+                <span class="p-chip">Spring</span>
+                <span class="p-chip">React</span>
+              </div>
+              <div class="p-props-tag">&lt;ProfileCard name=&quot;Rahul&quot; /&gt;</div>
+            </div>
+          </div>
+
+          <div class="card-content">
+            <div class="card-meta-row">
+              <span class="meta-tag react-tag">React Ecosystem</span>
+              <span class="tech-icon-pill react-pill">&#9883; Vite 8</span>
+            </div>
+
+            <h3 class="card-title">User Profiles Architecture</h3>
+            <p class="card-description">
+              Modular and declarative React component hierarchy demonstrating unidirectional data flow through props and custom component composition.
+            </p>
+
+            <div class="card-skill-tags">
+              <span class="skill-tag">Component Props</span>
+              <span class="skill-tag">Reusable UI</span>
+              <span class="skill-tag">JSX Templating</span>
+            </div>
+
+            <div class="card-action-footer">
+              <a href="./Assignment%204/" class="launch-btn" id="launchCard4">
+                <span>Launch App</span>
+                <svg class="launch-arrow" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <path d="M7 17L17 7M17 7H7M17 7V17" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- CARD 05: Controlled Form (React) -->
+        <article class="project-card" data-category="React" data-assignment="5">
+          <div class="card-art art-purple">
+            <div class="card-glass-header">
+              <span class="project-index">ASSIGNMENT 05</span>
+              <span class="stack-badge badge-react">REACT + VITE</span>
+            </div>
+
+            <!-- Controlled Form Mockup Representation -->
+            <div class="controlled-mockup">
+              <div class="c-stream-line">
+                <span class="c-tag">Input Field</span>
+                <span class="c-stream-arrow">&rlarr;</span>
+                <span class="c-tag highlight">useState()</span>
+              </div>
+              <div class="c-preview-box">
+                <div class="c-preview-row">
+                  <span class="c-preview-k">Name:</span>
+                  <span class="c-preview-v">Sarah Jenkins</span>
+                </div>
+                <div class="c-preview-row">
+                  <span class="c-preview-k">Course:</span>
+                  <span class="c-preview-v">MCA Cloud Systems</span>
+                </div>
+              </div>
+              <div class="c-pulse-indicator">
+                <span class="c-pulse-dot"></span>
+                <span>Bidirectional State Sync Active</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="card-content">
+            <div class="card-meta-row">
+              <span class="meta-tag react-tag">React Ecosystem</span>
+              <span class="tech-icon-pill react-pill">&#9883; Vite 8</span>
+            </div>
+
+            <h3 class="card-title">Controlled Student Form</h3>
+            <p class="card-description">
+              Dual-binding controlled component architecture capturing inputs dynamically and synchronizing real-time preview displays via the useState Hook.
+            </p>
+
+            <div class="card-skill-tags">
+              <span class="skill-tag">useState Hook</span>
+              <span class="skill-tag">Controlled Inputs</span>
+              <span class="skill-tag">Reactive Sync</span>
+            </div>
+
+            <div class="card-action-footer">
+              <a href="./Assignment%205/" class="launch-btn" id="launchCard5">
+                <span>Launch App</span>
+                <svg class="launch-arrow" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <path d="M7 17L17 7M17 7H7M17 7V17" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- CARD 06: React Counter App -->
+        <article class="project-card" data-category="React" data-assignment="6">
+          <div class="card-art art-rose">
+            <div class="card-glass-header">
+              <span class="project-index">ASSIGNMENT 06</span>
+              <span class="stack-badge badge-react">REACT + VITE</span>
+            </div>
+
+            <!-- Counter Mockup Representation -->
+            <div class="counter-mockup">
+              <div class="counter-display-card">
+                <span class="c-label">STATE VALUE</span>
+                <span class="c-value">42</span>
+              </div>
+              <div class="counter-btn-row">
+                <span class="c-action dec">&minus;</span>
+                <span class="c-action reset">&#8635;</span>
+                <span class="c-action inc">+</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="card-content">
+            <div class="card-meta-row">
+              <span class="meta-tag react-tag">React Ecosystem</span>
+              <span class="tech-icon-pill react-pill">&#9883; Vite 8</span>
+            </div>
+
+            <h3 class="card-title">Stateful Counter Engine</h3>
+            <p class="card-description">
+              An interactive state manipulation app built on modern React hooks, handling increment, decrement, and zero-reset boundaries with instantaneous UI re-rendering.
+            </p>
+
+            <div class="card-skill-tags">
+              <span class="skill-tag">useState Primitive</span>
+              <span class="skill-tag">Event Handlers</span>
+              <span class="skill-tag">State Lifecycle</span>
+            </div>
+
+            <div class="card-action-footer">
+              <a href="./Assignment%206/" class="launch-btn" id="launchCard6">
+                <span>Launch App</span>
+                <svg class="launch-arrow" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <path d="M7 17L17 7M17 7H7M17 7V17" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- No Results Feedback State -->
+      <div id="noResultsBox" class="empty-results-box" style="display: none;">
+        <div class="empty-icon-wrap">&#128269;</div>
+        <h3 class="empty-title">No assignments match your query</h3>
+        <p class="empty-desc">Try clearing the search term or resetting your active category filter.</p>
+        <button class="empty-reset-btn" id="resetSearchBtn">Reset Search &amp; Filters</button>
+      </div>
+    </section>
+
+    <!-- Architecture & Learning Matrix Section -->
+    <section class="learning-matrix-section">
+      <div class="matrix-card">
+        <div class="matrix-header">
+          <div class="matrix-tag">COURSE ROADMAP</div>
+          <h3 class="matrix-title">Full Stack Mastery Pathway</h3>
+          <p class="matrix-subtitle">Key engineering milestones covered across the LCA-2 lab modules.</p>
+        </div>
+
+        <div class="matrix-grid">
+          <div class="matrix-col">
+            <div class="col-icon js-icon">&#9889;</div>
+            <h4>Phase 1 &bull; Core JS Foundations</h4>
+            <p>Mastering imperative execution, the DOM tree, custom event dispatchers, and regex validation mechanisms.</p>
+            <ul class="col-list">
+              <li>Mathematical switch interpreters</li>
+              <li>Dynamic element injection &amp; deletion</li>
+              <li>Form error state management</li>
+            </ul>
+          </div>
+
+          <div class="matrix-col">
+            <div class="col-icon react-icon">&#9883;</div>
+            <h4>Phase 2 &bull; Modern React &amp; Vite</h4>
+            <p>Transitioning from imperative DOM manipulation to declarative, component-driven reactive state engines.</p>
+            <ul class="col-list">
+              <li>Component hierarchies &amp; Props</li>
+              <li>Bilateral controlled input handling</li>
+              <li>Hooks-based state lifecycle (<code class="inline-code">useState</code>)</li>
+            </ul>
+          </div>
+
+          <div class="matrix-col">
+            <div class="col-icon deploy-icon">&#128640;</div>
+            <h4>Phase 3 &bull; CI/CD &amp; Deployment</h4>
+            <p>Automating build artifacts, compiling Vite bundles via GitHub Actions, and continuous delivery to GitHub Pages.</p>
+            <ul class="col-list">
+              <li>Vite production rollup bundling</li>
+              <li>Relative path asset isolation (<code class="inline-code">base: './'</code>)</li>
+              <li>GitHub Pages automated workflow</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Modern Glass Footer -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-left">
+        <div class="brand-logo footer-brand">
+          <div class="brand-badge mini">
+            <span class="brand-letter">V</span>
+          </div>
+          <span class="brand-name">Vinit<span class="brand-dot">.</span></span>
+        </div>
+        <p class="footer-tagline">
+          Full Stack Development LCA-2 Portfolio &bull; Crafted with precision &amp; modern web standards.
+        </p>
+      </div>
+
+      <div class="footer-right">
+        <div class="footer-links">
+          <a href="#projectsSection">Assignments</a>
+          <a href="https://github.com/vinit3977/FSD-Assignment-LCA-2" target="_blank" rel="noopener noreferrer">GitHub Source</a>
+          <a href="https://github.com/vinit3977" target="_blank" rel="noopener noreferrer">Profile</a>
+        </div>
+        <span class="copyright-text">&copy; 2026 Vinit. All rights reserved.</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Script -->
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator | Assignment 1</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="bg-glow glow-1"></div>
+    <div class="bg-glow glow-2"></div>
+
+    <a href="../index.html" class="back-nav-btn">
+        <span class="back-arrow">←</span>
+        <span>Back to Portfolio</span>
+    </a>
+
+    <div class="calculator">
+        <div class="badge-pill">
+            <span class="badge-dot"></span>
+            <span>ASSIGNMENT 01</span>
+        </div>
+
+        <h2>Simple Calculator</h2>
+        <p class="subtitle">Perform quick arithmetic operations instantly</p>
+
+        <div class="input-group">
+            <label for="num1">First Number</label>
+            <input type="number" id="num1" placeholder="e.g. 42">
+        </div>
+
+        <div class="input-group">
+            <label for="operator">Operation</label>
+            <div class="select-wrapper">
+                <select id="operator">
+                    <option value="+">Addition (+)</option>
+                    <option value="-">Subtraction (−)</option>
+                    <option value="*">Multiplication (×)</option>
+                    <option value="/">Division (÷)</option>
+                </select>
+                <span class="select-chevron">▾</span>
+            </div>
+        </div>
+
+        <div class="input-group">
+            <label for="num2">Second Number</label>
+            <input type="number" id="num2" placeholder="e.g. 18">
+        </div>
+
+        <div class="button-row">
+            <button class="calc-btn" onclick="calculate()">Calculate</button>
+            <button class="reset" onclick="resetCalculator()">Reset</button>
+        </div>
+
+        <div class="result-box">
+            <span class="result-label">Computed Result</span>
+            <h3 id="result">Result: <span class="empty-state">—</span></h3>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
